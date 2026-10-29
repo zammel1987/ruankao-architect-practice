@@ -13,8 +13,10 @@
 发布到 GitHub Pages 后，可以直接用浏览器打开：
 
 ```text
-https://zhang-986.github.io/ruankao-architect-practice/
+https://zammel1987.github.io/ruankao-architect-practice/
 ```
+
+> 本仓库 fork 自 [Zhang-986/ruankao-architect-practice](https://github.com/Zhang-986/ruankao-architect-practice)，在原题库基础上追加了 2026年上半年真题（见下方「数据说明」）。
 
 ## 本地运行
 
@@ -81,13 +83,21 @@ node ruankao_practice_app/scripts/export_app_data.mjs
 
 当前包含：
 
-- 综合知识选择题：1822 道
-- 其中真题选择题：1297 道
+- 综合知识选择题：1889 道
+- 其中真题选择题：1364 道
 - 其中模拟选择题：525 道
-- 案例分析：78 道
-- 论文题：60 道
+- 案例分析：83 道
+- 论文题：64 道
 
-真题选择题覆盖 `2009年下半年` 到 `2025年下半年` 中可结构化的公开资料。`2009-2018` 的综合知识由 PDF 自动抽取补齐；`2019年下半年` 当前源文件是扫描版，暂未纳入可判题题库，后续需要 OCR 或人工复核。
+真题选择题覆盖 `2009年下半年` 到 `2026年上半年` 中可结构化的公开资料。`2009-2018` 的综合知识由 PDF 自动抽取补齐；`2019年下半年` 当前源文件是扫描版，暂未纳入可判题题库，后续需要 OCR 或人工复核。
+
+`2026年上半年`（考生回忆版：67 道选择题、5 道案例、4 道论文）由 `scripts/add_2026_upstream.py` 从 [awesome-ruankao](https://github.com/wujiaming88/awesome-ruankao) 的 Markdown 转换后追加，原有题目未改动：
+
+```bash
+python scripts/add_2026_upstream.py data/bank.json <awesome-ruankao 目录> <上游 commit> report.txt
+```
+
+上游 `2026年10月` 模拟卷 3-5 与已收录的 `2026年5月` 模拟卷题目相同，未重复收录。
 
 ## 隐私说明
 
